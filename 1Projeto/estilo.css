@@ -1,0 +1,110 @@
+body {
+    background: whitesmoke;
+    font-family: "Roboto", sans-serif;
+}
+.conteudo{
+    width: 100vw;
+    height: 100vh;
+    background: azure;
+    border-radius: 12px;
+    border-color: blue;
+    display: grid;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.box {
+    width: 545px;
+    height: 500px;
+    background: white;
+    border: 1px solid darkcyan;
+    display: grid;
+    justify-content: center;
+}
+[header] {
+    text-align: center;
+    border-bottom: 3px solid cadetblue;
+    height: 100px;
+    margin-bottom: 10px;
+    background: cornflowerblue;
+}
+
+h1 {
+    color: white;
+    font-size: 60px;
+    margin-top: 0px;
+    padding: 10px;
+}
+[menu] {
+    height: 250px;
+    display: grid;
+    flex-direction: column;
+    justify-items: left;
+
+}
+label {
+    font-size: 20px;
+    color: darkcyan;
+    font-weight: 600;
+    display: grid;
+    justify-items: left;
+    
+}
+
+label input {
+    width: 500px;
+    height: 25px;
+    margin: 10px;
+    padding: 10px;
+    display: grid;
+
+}
+.colorButtonLogin {
+    background: darkturquoise;
+    margin: 10px;
+    width: 522px;
+    height: 40px;
+    border: none;
+    text-align: center;
+    color: white;
+    font-size: 22px;
+    padding: 0px;
+}
+.colorButtonLogin:hover {
+    background-color: white;
+    color: blue;
+    border: 1px solid blue;
+}
+.footer {
+    height: 116px;
+    margin-top: 20px;
+    background: rgb(198, 223, 238);
+}
+
+[footerSettings] {
+    display: flex;
+    justify-content: right;
+    padding: 40px;
+}
+
+[footerSettings] a {
+    color: grey;
+    font-size: 18px;
+    padding: 10px;
+    text-decoration: none;
+}
+[footerSettings] input {
+    background: white;
+    height: 25px;
+    font-size: 18px;
+    color: mediumblue;
+    font-weight: 800;
+    border-radius: 5px;
+    border: 1px solid yellow;
+    
+}
+[footerSettings] input:hover {
+    background: green;
+    color: white;
+}
