@@ -1,10 +1,16 @@
+html, body, .conteudo {
+    box-sizing: border-box;
+	height: 100%;
+	width: 100%;
+	margin: 0;
+}
+
 body {
     background: whitesmoke;
     font-family: "Roboto", sans-serif;
 }
+
 .conteudo{
-    width: 100vw;
-    height: 100vh;
     background: azure;
     border-radius: 12px;
     border-color: blue;
@@ -22,7 +28,7 @@ body {
     display: grid;
     justify-content: center;
 }
-[header] {
+.header {
     text-align: center;
     border-bottom: 3px solid cadetblue;
     height: 100px;
@@ -36,7 +42,7 @@ h1 {
     margin-top: 0px;
     padding: 10px;
 }
-[menu] {
+.menu {
     height: 250px;
     display: grid;
     flex-direction: column;
@@ -44,25 +50,47 @@ h1 {
 
 }
 label {
+    margin-left: 10px;
     font-size: 20px;
     color: darkcyan;
     font-weight: 600;
     display: grid;
-    justify-items: left;
     
 }
 
-label input {
+input {
     width: 500px;
     height: 25px;
     margin: 10px;
     padding: 10px;
-    display: grid;
 
 }
+
+.align {
+    display: flex;
+    justify-content: left;
+    width: 522px;
+    height: 15px;
+    margin: 0px;
+    
+    
+}
+
+.checkbox {
+    width: 25px;
+    height: 15px;
+    margin: 0px;
+}
+
+.adjust {
+    font-size: 15px;
+    margin-left: 0px;
+}
+
 .colorButtonLogin {
     background: darkturquoise;
     margin: 10px;
+    margin-bottom: 0px;
     width: 522px;
     height: 40px;
     border: none;
@@ -77,34 +105,38 @@ label input {
     border: 1px solid blue;
 }
 .footer {
-    height: 116px;
-    margin-top: 20px;
+    height: 135px;
     background: rgb(198, 223, 238);
 }
 
-[footerSettings] {
+.footerSettings {
     display: flex;
     justify-content: right;
     padding: 40px;
 }
 
-[footerSettings] a {
+.footerSettings a {
     color: grey;
     font-size: 18px;
     padding: 10px;
     text-decoration: none;
 }
-[footerSettings] input {
+
+.footerSettings a:hover {
+    color: darkcyan;
+}
+
+.footerSettings button {
     background: white;
-    height: 25px;
-    font-size: 18px;
+    height: 40px;
+    font-size: 15px;
     color: mediumblue;
     font-weight: 800;
     border-radius: 5px;
-    border: 1px solid yellow;
+    border: 1px solid grey;
     
 }
-[footerSettings] input:hover {
+.footerSettings button:hover {
     background: green;
     color: white;
 }

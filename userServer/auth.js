@@ -4,12 +4,11 @@ const bodyparser = require('body-parser')
 app.use(bodyparser.json())
 app.use(bodyparser.urlencoded({extended: true}))
 
-{app.post('/usuarios/:id', (req, resp) => {
-    console.log(req.params.id)
+app.post('/users', (req, resp) => {
+    console.log(req.params)
     console.log(req.body)
     resp.send('<h1>Dados Enviados.</h1>')
 
 })
-}
 
 app.listen(5555)

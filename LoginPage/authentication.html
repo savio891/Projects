@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>   
+        <title>Login</title>
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+        <link rel="stylesheet" href="https://fonts.google.com/specimen/Roboto">
+        <link href="style.css" rel="stylesheet" type="text/css" >
+        <script src="auth.js"></script>
+</head>
+
+<body>
+    <div class="conteudo">
+        <div class="box">
+            <div class="header">
+                <h1>Login</h1>
+            </div>
+            <form method="POST" id="loginForm">
+                <div class="menu">
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email" placeholder="Digite o seu email">
+                    <label for="password">Senha</label>
+                    <input type="password" name="senha" id="password" placeholder="Digite a sua Senha">
+                    <div class="align">
+                        <input type="checkbox" name="continuarLogin" class="checkbox">
+                        <label class="adjust">Mantenha-me conectado</label>
+                    </div>
+                    <button type="submit" class="colorButtonLogin" onclick="verificarCampos(event)" formaction="http://localhost:5555/users">Entrar</button>
+                </div>
+            </form>
+            <div class="footer">
+                <div class="footerSettings">
+                    <a href="#">Esqueci a minha senha</a>
+                    <button>Cadastrar-me</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        function verificarCampos(e) {
+            if (loginForm.email.value.trim() === "" || loginForm.password.value.trim() === "") {
+                alert('É necessário preencher todos os campos!')
+                e.preventDefault()
+                const link = e.button
+                window.location.button = link.button
+            }
+        }
+    </script>
+</body>
+
+</html>

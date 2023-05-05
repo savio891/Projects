@@ -1,8 +1,8 @@
 {
-  "name": "1projeto",
+  "name": "userserver",
   "version": "1.0.0",
   "description": "",
-  "main": "autent.js",
+  "main": "auth.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
