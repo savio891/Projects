@@ -8,7 +8,7 @@ export default function ButtonClear(props) {
         onClick={props.click}
         className="btn btn-danger"
       >
-        Reset
+        Limpar
       </button>
     </>
   );

@@ -31,6 +31,10 @@ export default function Form() {
     setResultado("");
   }
 
+  function handleSubmit(e) {
+    e.preventDefault();
+  }
+
   function calculateDatasReview() {
 
     if (typeBrand == "fiat") {
@@ -41,7 +45,7 @@ export default function Form() {
       const reviewInterval = recentReview - previousReview;
       const numberDays = Math.floor(reviewInterval / (1000 * 60 * 60 * 24));
       const differenceBetweenReviews = recentKilometerNumber - previousKilometerNumber;
-      const mileageExceeded = recentKilometer - 11000;
+      const mileageExceeded = previousKilometerNumber != 0 ? differenceBetweenReviews - 11000 : recentKilometer - 11000;
 
       if (previousKilometerNumber > recentKilometerNumber) {
         setResultado(
@@ -94,7 +98,7 @@ export default function Form() {
       const reviewInterval = recentReview - previousReview;
       const numberDays = Math.floor(reviewInterval / (1000 * 60 * 60 * 24));
       const differenceBetweenReviews = recentKilometerNumber - previousKilometerNumber;
-      const mileageExceeded = recentKilometer - 13000;
+      const mileageExceeded = previousKilometerNumber != 0 ? differenceBetweenReviews - 13000 : recentKilometer - 13000;
 
         if (previousKilometerNumber > recentKilometerNumber) {
           setResultado(
@@ -148,7 +152,7 @@ export default function Form() {
       const reviewInterval = recentReview - previousReview;
       const numberDays = Math.floor(reviewInterval / (1000 * 60 * 60 * 24));
       const differenceBetweenReviews = recentKilometerNumber - previousKilometerNumber;
-      const mileageExceeded = recentKilometer - 21000;
+      const mileageExceeded = previousKilometerNumber != 0 ? differenceBetweenReviews - 21000 : recentKilometer - 21000;
 
         if (previousKilometerNumber > recentKilometerNumber) {
           setResultado(
@@ -193,12 +197,14 @@ export default function Form() {
         }
       }
     } else {
-      return false;
+      setResultado(
+        <Warning label={"É obrigatório selecionar a marca e o tipo de combustível."}/>
+      )
     }
   }
 
   return (
-    <form>
+    <form onSubmit={handleSubmit}>
       <div className="form-row align-items-center">
         <div className="col-auto my-1">
           <InputBrand
@@ -236,7 +242,7 @@ export default function Form() {
             )}
             <div className="form-data">
               <InputRecentReviewVehicle
-                label="Data revisão recente:"
+                label="Data Revisão Recente:"
                 value={recentVehicleReview}
                 event={(e) => setRecentVehicleReview(e.target.value)}
               />
